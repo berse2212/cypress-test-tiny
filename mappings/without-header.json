@@ -1,0 +1,19 @@
+{
+  "id": "cb66d902-f3af-40e1-aa03-a8d94e611a2d",
+  "request" : {
+    "urlPath" : "/data",
+    "method" : "GET",
+    "headers" : {
+      "X-E2E-User": {
+        "absent" : true
+      }
+    }
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "ERROR {{request.query.num}}",
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}

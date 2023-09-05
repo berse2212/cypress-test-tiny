@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+Hello World
+
+<span id="insert"></span>
+
+<script>
+  for (let i = 0; i < 40; i++) {
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "http://localhost:8080/data?num="+i);
+
+    xhr.onload = () => {
+      document.getElementById('insert').innerText += xhr.response;
+
+      console.log(xhr.response);
+      console.log(xhr.headers)
+    }
+
+    xhr.send();
+  }
+
+</script>
+</html>

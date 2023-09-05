@@ -16,5 +16,14 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+
+beforeEach( function () {
+  const user = "user";
+  cy.intercept({ url: '*', resourceType: /xhr/ }, (req) => {
+    req.headers['X-E2E-User'] = user;
+  }).as('setUser');
+});
+
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

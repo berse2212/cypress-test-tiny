@@ -1,0 +1,19 @@
+{
+  "id": "1c088de5-1d8a-4f95-98cb-7b06136bb005",
+  "request" : {
+    "urlPath" : "/data",
+    "method" : "GET",
+    "headers" : {
+      "X-E2E-User": {
+        "equalTo": "user"
+      }
+    }
+  },
+  "response" : {
+    "status": 200,
+    "body": "Hello XHR",
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}
